@@ -1,0 +1,126 @@
+@use "function" as *;
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --very-dark-blue-main: hsl(217, 54%, 11%);
+  --very-dark-blue-card: hsl(216, 50%, 16%);
+  --very-dark-blue-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  font-family: "Outfit", sans-serif;
+  font-weight: 500;
+  background-color: var(--very-dark-blue-main);
+  color: var(--soft-blue);
+  padding: 1.5rem;
+}
+
+.main {
+  background-color: var(--very-dark-blue-card);
+  border-radius: rem(5);
+  padding: rem(24);
+  max-width: auto;
+  // width: rem(350);
+  // width: auto;
+
+  @media (min-width: 375px) {
+    width: rem(350);
+    margin: auto;
+  }
+
+  &_img {
+    border-radius: rem(5);
+  }
+
+  &_img img {
+    max-width: 100%;
+    max-height: rem(300);
+    border-radius: rem(5);
+    margin-bottom: rem(30);
+  }
+
+  h1 {
+    color: var(--white);
+    margin-bottom: rem(25);
+    font-size: rem(22);
+    font-weight: 600;
+    // width: rem(300);
+  }
+
+  p {
+    font-size: 18px;
+    margin-bottom: rem(24);
+    // width: rem(300);
+  }
+
+  &_detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: rem(16);
+    // width: rem(300);
+
+    &_price {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--cyan);
+
+      img {
+        margin-right: rem(6);
+      }
+    }
+
+    &_time {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      img {
+        margin-right: 6px;
+      }
+    }
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid var(--very-dark-blue-line);
+    width: rem(300);
+  }
+
+  &_profile {
+    display: flex;
+    align-items: center;
+    margin-top: 24px;
+    width: rem(300);
+
+    &_avatar {
+      width: 32px;
+      height: 32px;
+      border: 2px solid var(--white);
+      border-radius: 50%;
+      margin-right: 16px;
+    }
+
+    &_avatar img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    span {
+      color: var(--white);
+    }
+  }
+}

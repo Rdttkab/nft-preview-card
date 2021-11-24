@@ -14,7 +14,7 @@
 
     <title>Frontend Mentor | NFT preview card component</title>
 
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="dist/styles.css" />
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
@@ -30,18 +30,18 @@
   <body>
     <main class="main">
       <div class="main_img">
-        <img src="images/image-equilibrium.jpg" alt="" srcset="" />
+        <img src="images/image-equilibrium.jpg" alt="" />
       </div>
       <h1>Equilibrium #3429</h1>
       <p>Our Equilibrium collection promotes balance and calm.</p>
       <div class="main_detail">
         <div class="main_detail_price">
-          <i><img src="images/icon-ethereum.svg" alt="" srcset="" /></i> 0.041
-          ETH
+          <img src="images/icon-ethereum.svg" alt="Ethereum Icon" />
+          <span>0.041 ETH</span>
         </div>
         <div class="main_detail_time">
-          <i><img src="images/icon-clock.svg" alt="" srcset="" /></i> 3 days
-          left
+          <img src="images/icon-clock.svg" alt="Clock Icon" />
+          <span>3 days left</span>
         </div>
       </div>
       <hr />
@@ -61,5 +61,6 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Rediet Tekola</a>.
     </div>
+    <script src="dist/index.js"></script>
   </body>
 </html>
