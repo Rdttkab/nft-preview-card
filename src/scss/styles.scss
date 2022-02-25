@@ -24,7 +24,25 @@ body {
   font-weight: 500;
   background-color: var(--very-dark-blue-main);
   color: var(--soft-blue);
-  padding: 1.5rem;
+  padding: rem(1.5);
+  overflow: hidden;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  align-items: center;
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }
 
 .main {
@@ -32,19 +50,17 @@ body {
   border-radius: rem(5);
   padding: rem(24);
   max-width: auto;
-  // width: rem(350);
-  // width: auto;
 
-  @media (min-width: 375px) {
+  @media (min-width: rem(375)) {
     width: rem(350);
     margin: auto;
   }
 
-  &_img {
-    border-radius: rem(5);
-  }
+  // &_img {
+  //   border-radius: rem(5);
+  // }
 
-  &_img img {
+  .img {
     max-width: 100%;
     max-height: rem(300);
     border-radius: rem(5);
@@ -56,13 +72,11 @@ body {
     margin-bottom: rem(25);
     font-size: rem(22);
     font-weight: 600;
-    // width: rem(300);
   }
 
   p {
-    font-size: 18px;
+    font-size: rem(18);
     margin-bottom: rem(24);
-    // width: rem(300);
   }
 
   &_detail {
@@ -70,7 +84,6 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-bottom: rem(16);
-    // width: rem(300);
 
     &_price {
       display: flex;
@@ -89,29 +102,29 @@ body {
       align-items: center;
 
       img {
-        margin-right: 6px;
+        margin-right: rem(6);
       }
     }
   }
 
   hr {
     border: none;
-    border-top: 1px solid var(--very-dark-blue-line);
+    border-top: rem(1) solid var(--very-dark-blue-line);
     width: rem(300);
   }
 
   &_profile {
     display: flex;
     align-items: center;
-    margin-top: 24px;
+    margin-top: rem(24);
     width: rem(300);
 
     &_avatar {
-      width: 32px;
-      height: 32px;
-      border: 2px solid var(--white);
+      width: rem(32);
+      height: rem(32);
+      border: rem(2) solid var(--white);
       border-radius: 50%;
-      margin-right: 16px;
+      margin-right: rem(16);
     }
 
     &_avatar img {
